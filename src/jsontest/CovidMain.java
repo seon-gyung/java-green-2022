@@ -18,6 +18,7 @@ public class CovidMain {
         List<Item> result = Covid.covidList(startCreateDt, endCreateDt);
 
         for (int i = 0; i < result.size(); i++) {
+            System.out.println("--------------------------------------------");
             System.out.println("누적 의심신고 검사자 : " + result.get(i).getAccExamCnt());
             System.out.println("등록 일시분초 : " + result.get(i).getCreateDt());
             System.out.println("사망자 수 : " + result.get(i).getDeathCnt());
@@ -27,6 +28,7 @@ public class CovidMain {
             System.out.println("기준 시간 : " + result.get(i).getStateTime());
             System.out.println("수정 일시분초 : " + result.get(i).getUpdateDt());
             System.out.println("--------------------------------------------");
+            System.out.println("");
         }
     }
 }
